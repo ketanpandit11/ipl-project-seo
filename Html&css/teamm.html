@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>IPL Teams</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body{
+            background-color: #3c3c3c;
+            color: white;
+        }
+
+        h1{
+            text-align: center;
+            margin: 30px 0;
+            font-size: 40px;
+        }
+
+        .team-container{
+            width: 90%;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr); 
+            gap: 25px;
+        }
+
+        .team-card{
+            background-color: #222;
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .team-card:hover{
+            transform: scale(1.05);
+            background-color: red;
+        }
+
+        .team-card img{
+            width: 80px;
+            height: 80px;
+            margin-bottom: 15px;
+        }
+
+        .team-card h3{
+            font-size: 18px;
+        }
+
+        @media(max-width: 992px){
+            .team-container{
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media(max-width: 600px){
+            .team-container{
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        .place{
+            position: fixed;
+            bottom: 2%;
+            left: 50%;
+            color: white;
+        }
+         ul{
+            display:none;
+            background:#111;
+            padding:15px;
+            width:300px;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>IPL Teams 2026</h1>
+
+<div class="team-container">
+
+    <div class="team-card" id ="CSK" onmouseenter="showCSK()" onmouseleave="hideCSK()">
+
+        <img src="CSKlogo.png">
+        <h3>Chennai Super Kings</h3>
+    </div>
+
+<ul id="cskPlayers" style="display:none;">
+  <li>Ruturaj Gaikwad (c)</li>
+  <li>MS Dhoni</li>
+  <li>Sanju Samson</li>
+  <li>Ayush Mhatre</li>
+  <li>Dewald Brevis</li>
+  <li>Urvil Patel</li>
+  <li>Shivam Dube</li>
+  <li>Jamie Overton</li>
+  <li>Ramakrishna Ghosh</li>
+  <li>Noor Ahmad</li>
+  <li>Khaleel Ahmed</li>
+  <li>Anshul Kamboj</li>
+  <li>Gurjapneet Singh</li>
+  <li>Shreyas Gopal</li>
+  <li>Mukesh Choudhary</li>
+  <li>Nathan Ellis</li>
+  <li>Akeal Hosein</li>
+  <li>Prashant Veer</li>
+  <li>Kartik Sharma</li>
+  <li>Matthew Short</li>
+  <li>Aman Khan</li>
+  <li>Sarfaraz Khan</li>
+  <li>Matt Henry</li>
+  <li>Rahul Chahar</li>
+  <li>Zak Foulkes</li>
+</ul>
+
+    <div class="team-card" id="MI" onmouseenter="showMI()" onmouseleave="hideMI()">
+        <img src="milogo.png">
+        <h3>Mumbai Indians</h3>
+    </div>
+
+<ul id="miPlayers" class="players" >
+  <li>Hardik Pandya (c)</li>
+  <li>Rohit Sharma</li>
+  <li>Jasprit Bumrah</li>
+  <li>Suryakumar Yadav</li>
+  <li>Tilak Varma</li>
+  <li>Deepak Chahar</li>
+  <li>Naman Dhir</li>
+  <li>Raj Angad Bawa</li>
+  <li>Ashwani Kumar</li>
+  <li>Robin Minz</li>
+  <li>Raghu Sharma</li>
+  <li>Ryan Rickelton</li>
+  <li>Corbin Bosch</li>
+  <li>Will Jacks</li>
+  <li>Trent Boult</li>
+  <li>Mitchell Santner</li>
+  <li>AM Ghazanfar</li>
+  <li>Mayank Markande</li>
+  <li>Shardul Thakur</li>
+  <li>Sherfane Rutherford</li>
+  <li>Quinton de Kock</li>
+  <li>Danish Malewar</li>
+  <li>Mohammed Izhar</li>
+  <li>Atharva Ankolekar</li>
+  <li>Mayank Rawat</li>
+</ul>
+
+    <div class="team-card" id="RCB" onmouseenter="showRCB()" onmouseleave="hideRCB()">
+        <img src="RCBlogo.png">
+        <h3>Royal Challengers Bangalore</h3>
+    </div>
+
+    <ul id="rcbPlayers">
+    <li>Virat Kohli</li>
+    <li>Rajat Patidar</li>
+    <li>Devdutt Padikkal</li>
+    <li>Phil Salt</li>
+    <li>Jitesh Sharma</li>
+    <li>Tim David</li>
+    <li>Krunal Pandya</li>
+    <li>Romario Shepherd</li>
+    <li>Bhuvneshwar Kumar</li>
+    <li>Yash Dayal</li>
+    <li>Josh Hazlewood</li>
+    <li>Suyash Sharma</li>
+    <li>Abhinandan Singh</li>
+    <li>Jacob Bethell</li>
+    <li>Nuwan Thushara</li>
+    <li>Rasikh Dar Salam</li>
+    <li>Swapnil Singh</li>
+    <li>Venkatesh Iyer</li>
+    <li>Jacob Duffy</li>
+    <li>Satvik Deswal</li>
+    <li>Mangesh Yadav</li>
+    <li>Jordan Cox</li>
+    <li>Vicky Ostwal</li>
+    <li>Vihaan Malhotra</li>
+    <li>Kanishk Chouhan</li>
+</ul>
+
+
+<div class="team-card" id="KKR" onmouseenter="showKKR()" onmouseleave="hideKKR()">
+    <img src="kkr1.jpg">
+    <h3>Kolkata Knight Riders</h3>
+</div>
+
+<ul id="KKRPlayers" class="players">
+  <li>Ajinkya Rahane</li>
+  <li>Angkrish Raghuvanshi</li>
+  <li>Anukul Roy</li>
+  <li>Harshit Rana</li>
+  <li>Manish Pandey</li>
+  <li>Ramandeep Singh</li>
+  <li>Rinku Singh</li>
+  <li>Rovman Powell</li>
+  <li>Sunil Narine</li>
+  <li>Umran Malik</li>
+  <li>Vaibhav Arora</li>
+  <li>Varun Chakravarthy</li>
+  <li>Cameron Green</li>
+  <li>Finn Allen</li>
+  <li>Matheesha Pathirana</li>
+  <li>Tejasvi Singh</li>
+  <li>Kartik Tyagi</li>
+  <li>Prashant Solanki</li>
+  <li>Rahul Tripathi</li>
+  <li>Tim Seifert</li>
+  <li>Mustafizur Rahman</li>
+  <li>Sarthak Ranjan</li>
+  <li>Daksh Kamra</li>
+  <li>Rachin Ravindra</li>
+  <li>Akash Deep</li>
+</ul>
+
+    <div class="team-card" id="RR" onmouseenter="showRR()" onmouseleave="hideRR()">
+        <img src="rr.png">
+        <h3>Rajasthan Royals</h3>
+    </div>
+    
+<ul id="rrPlayers" class="players" >
+  <li>Yashasvi Jaiswal</li>
+  <li>Dhruv Jurel</li>
+  <li>Riyan Parag</li>
+  <li>Shimron Hetmyer</li>
+  <li>Jofra Archer</li>
+  <li>Sandeep Sharma</li>
+  <li>Tushar Deshpande</li>
+  <li>Kwena Maphaka</li>
+  <li>Nandre Burger</li>
+  <li>Ravindra Jadeja</li>
+  <li>Sam Curran</li>
+  <li>Donovan Ferreira</li>
+  <li>Lhuan-Dre Pretorius</li>
+  <li>Shubham Dubey</li>
+  <li>Yudhvir Singh Charak</li>
+  <li>Ravi Bishnoi</li>
+  <li>Sushant Mishra</li>
+  <li>Yash Raj Punja</li>
+  <li>Vignesh Puthur</li>
+  <li>Ravi Singh</li>
+  <li>Aman Rao</li>
+  <li>Brijesh Sharma</li>
+  <li>Kuldeep Sen</li>
+  <li>Adam Milne</li>
+</ul>
+
+    <div class="team-card" id="SRH" onmouseenter="showSRH()" onmouseleave="hideSRH()">
+        <img src="srhlogo.png">
+        <h3>Sunrisers Hyderabad</h3>
+    </div>
+
+<ul id="srhPlayers" class="players" >
+  <li>Pat Cummins (c)</li>
+  <li>Travis Head</li>
+  <li>Abhishek Sharma</li>
+  <li>Aniket Verma</li>
+  <li>R. Smaran</li>
+  <li>Ishan Kishan</li>
+  <li>Heinrich Klaasen</li>
+  <li>Nitish Kumar Reddy</li>
+  <li>Harsh Dubey</li>
+  <li>Kamindu Mendis</li>
+  <li>Harshal Patel</li>
+  <li>Brydon Carse</li>
+  <li>Jaydev Unadkat</li>
+  <li>Eshan Malinga</li>
+  <li>Zeeshan Ansari</li>
+  <li>Shivang Kumar</li>
+  <li>Salil Arora</li>
+  <li>Sakib Hussain</li>
+  <li>Onkar Tarmale</li>
+  <li>Amit Kumar</li>
+  <li>Praful Hinge</li>
+  <li>Krains Fuletra</li>
+  <li>Liam Livingstone</li>
+  <li>Shivam Mavi</li>
+  <li>Jack Edwards</li>
+</ul>
+
+    <div class="team-card" id="DC"  onmouseenter="showDC()" onmouseleave="hideDC()">
+        <img src="DClogo.png">
+        <h3>Delhi Capitals</h3>
+    </div>
+
+<ul id="dcPlayers" class="players">
+  <li>Axar Patel</li>
+  <li>KL Rahul</li>
+  <li>Kuldeep Yadav</li>
+  <li>Mitchell Starc</li>
+  <li>T. Natarajan</li>
+  <li>Tristan Stubbs</li>
+  <li>Mukesh Kumar</li>
+  <li>Nitish Rana</li>
+  <li>Abishek Porel</li>
+  <li>Ashutosh Sharma</li>
+  <li>Sameer Rizvi</li>
+  <li>Karun Nair</li>
+  <li>Madhav Tiwari</li>
+  <li>Tripurana Vijay</li>
+  <li>Ajay Mandal</li>
+  <li>David Miller</li>
+  <li>Ben Duckett</li>
+  <li>Auqib Nabi</li>
+  <li>Pathum Nissanka</li>
+  <li>Lungi Ngidi</li>
+  <li>Sahil Parakh</li>
+  <li>Prithvi Shaw</li>
+  <li>Kyle Jamieson</li>
+  <li>Vipraj Nigam</li>
+</ul>
+
+
+    <div class="team-card" id="PBKS" onmouseenter="showPBKS()" onmouseleave="hidePBKS()">
+        <img src="pbks.png">
+        <h3>Punjab Kings</h3>
+    </div>
+    
+<ul id="pbksPlayers" class="players">
+  <li>Shreyas Iyer (c)</li>
+  <li>Prabhsimran Singh</li>
+  <li>Priyansh Arya</li>
+  <li>Shashank Singh</li>
+  <li>Nehal Wadhera</li>
+  <li>Marcus Stoinis</li>
+  <li>Azmatullah Omarzai</li>
+  <li>Marco Jansen</li>
+  <li>Harpreet Brar</li>
+  <li>Yuzvendra Chahal</li>
+  <li>Arshdeep Singh</li>
+  <li>Musheer Khan</li>
+  <li>Pyla Avinash</li>
+  <li>Harnoor Pannu</li>
+  <li>Suryansh Shedge</li>
+  <li>Mitchell Owen</li>
+  <li>Xavier Bartlett</li>
+  <li>Lockie Ferguson</li>
+  <li>Vyshak Vijaykumar</li>
+  <li>Yash Thakur</li>
+  <li>Vishnu Vinod</li>
+  <li>Cooper Connolly</li>
+  <li>Ben Dwarshuis</li>
+  <li>Pravin Dubey</li>
+  <li>Vishal Nishad</li>
+</ul>
+
+    <div class="team-card" id="GT" onmouseenter="showGT()" onmouseleave="hideGT()">
+        <img src="gt.jpg">
+        <h3>Gujarat Titans</h3>
+    </div>
+
+<ul id="gtPlayers" class="players">
+  <li>Shubman Gill (c)</li>
+  <li>Sai Sudharsan</li>
+  <li>Jos Buttler</li>
+  <li>Mohammed Siraj</li>
+  <li>Prasidh Krishna</li>
+  <li>Washington Sundar</li>
+  <li>Sai Kishore</li>
+  <li>Kumar Kushagra</li>
+  <li>Anuj Rawat</li>
+  <li>Nishant Sindhu</li>
+  <li>Arshad Khan</li>
+  <li>Shahrukh Khan</li>
+  <li>Rahul Tewatia</li>
+  <li>Kagiso Rabada</li>
+  <li>Ishant Sharma</li>
+  <li>Gurnoor Brar</li>
+  <li>Rashid Khan</li>
+  <li>Manav Suthar</li>
+  <li>Jayant Yadav</li>
+  <li>Glenn Phillips</li>
+  <li>Ashok Sharma</li>
+  <li>Jason Holder</li>
+  <li>Tom Banton</li>
+  <li>Luke Wood</li>
+  <li>Prithviraj Yarra</li>
+</ul>
+
+    <div class="team-card" id="LSG" onmouseenter="showLSG()" onmouseleave="hideLSG()">
+        <img src="lsg.jpg">
+        <h3>Lucknow Super Giants</h3>
+    </div>
+
+<ul id="lsgPlayers" class="players">
+  <li>Rishabh Pant (c)</li>
+  <li>Nicholas Pooran</li>
+  <li>Abdul Samad</li>
+  <li>Ayush Badoni</li>
+  <li>Aiden Markram</li>
+  <li>Matthew Breetzke</li>
+  <li>Himmat Singh</li>
+  <li>Mitchell Marsh</li>
+  <li>Shahbaz Ahmed</li>
+  <li>Arshin Kulkarni</li>
+  <li>Mayank Yadav</li>
+  <li>Avesh Khan</li>
+  <li>Mohsin Khan</li>
+  <li>Manimaran Siddharth</li>
+  <li>Digvesh Rathi</li>
+  <li>Prince Yadav</li>
+  <li>Akash Singh</li>
+  <li>Mohammed Shami</li>
+  <li>Arjun Tendulkar</li>
+  <li>Wanindu Hasaranga</li>
+  <li>Anrich Nortje</li>
+  <li>Mukul Choudhary</li>
+  <li>Naman Tiwari</li>
+  <li>Akshat Raghuwanshi</li>
+  <li>Josh Inglis</li>
+</ul>
+
+</div>
+<a href="ipl.html" class="place">Back to home</a>
+
+<script>
+function showRCB(){
+    document.getElementById("rcbPlayers").style.display = "block";
+}
+function hideRCB(){
+    document.getElementById("rcbPlayers").style.display = "none";
+}
+
+function showCSK(){
+    document.getElementById("cskPlayers").style.display = "block";
+}
+function hideCSK(){
+    document.getElementById("cskPlayers").style.display = "none";
+}
+
+function showGT(){
+    document.getElementById("gtPlayers").style.display = "block";
+}
+function hideGT(){
+    document.getElementById("gtPlayers").style.display = "none";
+}
+
+function showMI(){
+    document.getElementById("miPlayers").style.display = "block";
+}
+function hideMI(){
+    document.getElementById("miPlayers").style.display = "none";
+}
+
+function showKKR(){
+    document.getElementById("KKRPlayers").style.display = "block";
+}
+function hideKKR(){
+    document.getElementById("KKRPlayers").style.display = "none";
+}
+
+function showRR(){
+    document.getElementById("rrPlayers").style.display = "block";
+}
+function hideRR(){
+    document.getElementById("rrPlayers").style.display = "none";
+}
+
+function showSRH(){
+    document.getElementById("srhPlayers").style.display = "block";
+}
+function hideSRH(){
+    document.getElementById("srhPlayers").style.display = "none";
+}
+
+function showDC(){
+    document.getElementById("dcPlayers").style.display = "block";
+}
+function hideDC(){
+    document.getElementById("dcPlayers").style.display = "none";
+}
+
+function showLSG(){
+    document.getElementById("lsgPlayers").style.display = "block";
+}
+function hideLSG(){
+    document.getElementById("lsgPlayers").style.display = "none";
+}
+
+function showPBKS(){
+    document.getElementById("pbksPlayers").style.display = "block";
+}
+function hidePBKS(){
+    document.getElementById("pbksPlayers").style.display = "none";
+}
+
+
+
+</script>
+</body>
+</html>
