@@ -1,0 +1,24 @@
+IPL-Project/
+│
+├── ipl.html
+├── teamm.html
+├── rank.html
+├── Login.php
+├── db.php
+│
+├── images/
+│   ├── CSKlogo.png
+│   ├── DClogo.png
+│   ├── gt.png
+│   ├── kkr1.png
+│   ├── lsg.png
+│   ├── milogo.png
+│   ├── pbks.png
+│   ├── RCBlogo.png
+│   ├── Rcbp.png
+│   ├── rr.png
+│   ├── srhlogo.png
+│   └── logo.png
+│
+└── video/
+    └── 2.mp4
